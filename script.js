@@ -78,10 +78,6 @@ async function fetchWeather() {
     `
   }
 
-  async function getForecastData(lon, lat) {
-
-  }
-
   // calls the 2 inner functions in order to make API calls & produce overall output 
   document.getElementById("search").value = "";
   const geocodeData = await getLonAndLat();
