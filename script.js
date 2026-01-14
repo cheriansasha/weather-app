@@ -3,8 +3,8 @@ async function fetchWeather() {
   const weatherDataSection = document.getElementById("weather-data");
   weatherDataSection.style.display = "block";  
   
-  require('dotenv').config();
-  const apiKey = process.env.WEATHER_API_KEY;
+  const response = await fetch('/api/key');
+  const { apiKey } = await response.json();
 
   // error msg for empty input
   if (searchInput == "") {
